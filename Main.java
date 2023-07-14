@@ -21,11 +21,11 @@ class Main {
     int input = 0;
     Scanner one = new Scanner(System.in);
     while (input != 5) {
-      System.out.println("Press 1 to add an item");
-      System.out.println("Press 2 to delete an item");
-      System.out.println("Press 3 to update an item");
-      System.out.println("Press 4 to show all the item");
-      System.out.println("Press 5 to quit the program");
+      System.out.println("Press 1 to add an item.");
+      System.out.println("Press 2 to delete an item.");
+      System.out.println("Press 3 to update an item.");
+      System.out.println("Press 4 to show all the item.");
+      System.out.println("Press 5 to quit the program.");
       input = one.nextInt();
       one.nextLine();
       if (input == 1) {
@@ -34,7 +34,7 @@ class Main {
         String name = one.nextLine();
         System.out.println("Enter the Serial Number:");
         String serialNumber = one.nextLine();
-        System.out.println("Enter the value in dollars (Whole Numbers)");
+        System.out.println("Enter the value in dollars (whole number)");
         int value = one.nextInt();
         one.nextLine();
         tempItem.name = name;
@@ -44,7 +44,7 @@ class Main {
       }
 
       else if (input == 2) {
-        System.out.println("Enter the serial number of the item you'd like to delete");
+        System.out.println("Enter the serial number of the item you'd like to delete:");
         String serialNumber = one.nextLine();
         for (int i = 0; i < cart.size(); i++) {
           if (cart.get(i).serialNumber.equals(serialNumber)) {
@@ -55,21 +55,17 @@ class Main {
       }
 
       else if (input == 3) {
-        System.out.println("Enter the serial number of the item you are changing");
+        System.out.println("Enter the serial number of the item you are changing:");
         String serialNumber = one.nextLine();
         String newName;
         String newSerialNumber;
         int newValue;
         for (int i = 0; i < cart.size(); i++) {
           if (cart.get(i).serialNumber.equals(serialNumber)) {
-            System.out.println("Item found. Beginning update.");
             System.out.println("Enter the new name:");
             newName = one.nextLine();
             cart.get(i).name = newName;
-            System.out.println("Enter the new serial number:");
-            newSerialNumber = one.nextLine();
-            cart.get(i).serialNumber = newSerialNumber;
-            System.out.println("Enter the new value:");
+            System.out.println("Enter the new value in dollars (whole number):");
             newValue = one.nextInt();
             cart.get(i).value = newValue;
           break;
@@ -83,10 +79,6 @@ class Main {
           System.out.println("Item Number" + i);
           System.out.println(cart.get(i));
         }
-      }
-
-      else if (input == 5) {
-        System.out.println("Goodbye!");
       }
 
       else {
