@@ -76,7 +76,6 @@ class Main {
 
       else if (input == 4) {
         for (int i = 0; i < cart.size(); i++) {
-          System.out.println("Item Number" + i);
           System.out.println(cart.get(i));
         }
       }
