@@ -11,7 +11,7 @@ class Inventory {
   }
 
   public String toString() {
-    return "Name: " + name + "\n Serial Number: " + serialNumber + "\n Value: " + value;
+    return name +","+ serialNumber+","+ value;
   }
 }
 
@@ -34,7 +34,7 @@ class Main {
         String name = one.nextLine();
         System.out.println("Enter the Serial Number:");
         String serialNumber = one.nextLine();
-        System.out.println("Enter the value in dollars (whole number)");
+        System.out.println("Enter the value in dollars (whole number):");
         int value = one.nextInt();
         one.nextLine();
         tempItem.name = name;
