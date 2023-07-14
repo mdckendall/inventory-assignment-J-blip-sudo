@@ -19,13 +19,13 @@ class Main {
   public static void main(String[] args) {
     ArrayList<Inventory> cart = new ArrayList<Inventory>();
     int input = 0;
+    Scanner one = new Scanner(System.in);
     while (input != 5) {
       System.out.println("Press 1 to add an item");
       System.out.println("Press 2 to delete an item");
       System.out.println("Press 3 to update an item");
       System.out.println("Press 4 to show all the item");
       System.out.println("Press 5 to quit the program");
-      Scanner one = new Scanner(System.in);
       input = one.nextInt();
       one.nextLine();
       if (input == 1) {
