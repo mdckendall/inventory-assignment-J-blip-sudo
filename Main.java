@@ -79,10 +79,6 @@ class Main {
           System.out.println(cart.get(i));
         }
       }
-
-      else {
-        System.out.println("Input invalid. Please type a number between 1 and 5");
-      }
     }
 
   }
