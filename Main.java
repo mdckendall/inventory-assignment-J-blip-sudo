@@ -9,7 +9,7 @@ class Inventory {
     
   }
   public String toString(){
-    return "Name: %s\n Serial Number: %s\n Value: %d\n".formatted(name, serialNumber, value);
+    return "Name: "+name+"\n Serial Number: "+serialNumber+"\n Value: "+value;
   }
 }
 
